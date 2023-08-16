@@ -1,0 +1,112 @@
+:root{
+    --purple:#663399;
+    --purplehigh:#993399;
+    --dark:#2a0051;
+    --light: #c151ea;
+    --punk: #e3c5ff;
+    --darkest: #3e0748;
+}
+
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+html {
+    font-size: 62.5%;
+  }
+body{
+    background-image: linear-gradient(to top, #663399, #74339a, #81339a, #8d339a, #993399); 
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(autofill, minmax(100px, 1fr));
+    height: 100vh;
+    background-image: linear-gradient(to top, #663399, #74339a, #81339a, #8d339a, #993399);
+}
+
+.item-1{
+    width: 100%;
+    background-color: var(--light);
+    grid-column: 1/2;
+    grid-row: 5/10;
+    opacity: 85%;
+}
+
+.item-2{
+    width: 100%;
+    background-color: var(--dark);
+    grid-column: 1/4;
+    grid-row: 7/9;
+    opacity: 75%;
+}
+
+.item-3{
+    width: 100%;
+    background-color: var(--purple);
+    grid-column: 5/8;
+    grid-row: 6/11;
+    opacity: 80%;
+
+}
+
+.item-4{
+    width: 100%;
+    border: 3px solid var(--punk);
+    grid-column: 6 / 9;
+    grid-row: 5 / 8;
+    opacity: 80%;
+}
+
+.item-5{
+    width: 100%;
+    border: 3px solid var(--punk);
+    grid-column: 7 / 10;
+    grid-row: 3 / 9;
+    opacity: 90%;
+}
+
+.item-6{
+    font-size: 5.6rem;
+    color:var(--dark);
+    grid-column: 6 / 9;
+    grid-row: 3 / 5;
+    display: grid;
+    place-items: center;
+    opacity: 90%;
+}
+.item-6{
+    margin:0;
+}
+
+.item-7{
+background-color: var(--light);
+grid-column: 3 / 4;
+grid-row:3/4;
+}
+
+/* si quiero alinear bien los elementos, es necesario hacerlos PADRE, la forma de hacer esto es
+aplicando display:grid */
+
+.item-8{
+    font-size: 4rem;
+    color:var(--punk);
+    display:grid;
+    grid-column: 4;
+    grid-row:3;
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+    place-items: center;
+}
+
+
+/* dos palabras claves para diseño responsive 
+AUTOFIT: Encaja las columnas disponibles en un espacio
+
+grid-template-columns: repeat(autofit, minmax(100px, 1fr))
+
+AUTOFILL: Llena la fila con tantas columnas como puedan caber.
+
+grid-template-columns: repeat(autofill, minmax(100px, 1fr))
+*/
